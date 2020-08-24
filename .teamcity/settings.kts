@@ -1,5 +1,6 @@
 import jetbrains.buildServer.configs.kotlin.v2019_2.*
 import jetbrains.buildServer.configs.kotlin.v2019_2.buildSteps.dotnetBuild
+import jetbrains.buildServer.configs.kotlin.v2019_2.buildSteps.dotnetTest
 import jetbrains.buildServer.configs.kotlin.v2019_2.triggers.vcs
 
 /*
@@ -41,6 +42,10 @@ object Build : BuildType({
     steps {
         dotnetBuild {
             projects = "TestApp/TestApp/TestApp.csproj"
+            param("dotNetCoverage.dotCover.home.path", "%teamcity.tool.JetBrains.dotCover.CommandLineTools.DEFAULT%")
+        }
+        dotnetTest {
+            projects = "TestApp/UnitTest/UnitTest.csproj"
             param("dotNetCoverage.dotCover.home.path", "%teamcity.tool.JetBrains.dotCover.CommandLineTools.DEFAULT%")
         }
     }
