@@ -40,6 +40,7 @@ object Build : BuildType({
 
     steps {
         dotnetBuild {
+            projects = "TestApp/TestApp/TestApp.csproj"
             param("dotNetCoverage.dotCover.home.path", "%teamcity.tool.JetBrains.dotCover.CommandLineTools.DEFAULT%")
         }
     }
