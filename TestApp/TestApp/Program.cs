@@ -2,7 +2,7 @@
 
 namespace TestApp
 {
-    lass Program
+    class Program
     {
         static void Main(string[] args)
         {
