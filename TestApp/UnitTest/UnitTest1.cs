@@ -8,7 +8,6 @@ namespace UnitTest
         [Fact]
         public void Test1()
         {
-
         }
     }
 }
