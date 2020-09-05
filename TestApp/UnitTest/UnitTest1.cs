@@ -6,7 +6,7 @@ namespace UnitTest
     public class UnitTest1
     {
         [Fact]
-        ublic void Test1()
+        public void Test1()
         {
         }
     }
